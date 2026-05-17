@@ -261,32 +261,7 @@ export default function Home() {
             }
           </div>
 
-          {/* Food scarcity awareness section */}
-          <div style={{ background: 'linear-gradient(135deg, #002B5E, #1a4a7a)', borderRadius: 'var(--radius)', padding: '32px 28px', color: '#fff', marginBottom: 36, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, alignItems: 'center' }}>
-            <div>
-              <div style={{ color: 'var(--manit-yellow)', fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 10 }}>Why this matters</div>
-              <h2 style={{ fontSize: 24, fontWeight: 800, marginBottom: 14, lineHeight: 1.3 }}>
-                Your hostel mess wastes food.<br />Someone nearby is hungry.
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 20, fontSize: 15 }}>
-                The average Indian wedding wastes food for 120+ people. MANIT's 5 hostels collectively discard hundreds of meals every week. Nourish is built to close that gap — one pickup at a time.
-              </p>
-              <Link to="/register"><button className="btn btn-yellow">Join the movement →</button></Link>
-            </div>
-            <div className="img-mosaic" style={{ height: 300 }}>
-              <div style={{ overflow: 'hidden', borderRadius: 8 }}>
-                <img src="/bhopal-lake.jpg" alt="Bhopal" className="mosaic-img" style={{ height: '100%' }} />
-              </div>
-              <div style={{ overflow: 'hidden', borderRadius: 8, background: 'linear-gradient(135deg, #1D9E75, #085041)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 4 }}>
-                <div style={{ fontSize: 32 }}>🌿</div>
-                <div style={{ color: '#fff', fontWeight: 700, fontSize: 13, textAlign: 'center' }}>Zero<br />Waste Goal</div>
-              </div>
-              <div style={{ overflow: 'hidden', borderRadius: 8, background: 'linear-gradient(135deg, #F5C400, #EF9F27)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 4 }}>
-                <img src="/manit-logo-sm.png" alt="MANIT" style={{ width: 50, objectFit: 'contain' }} />
-                <div style={{ color: 'var(--manit-navy)', fontWeight: 700, fontSize: 11, textAlign: 'center' }}>MANIT<br />BHOPAL</div>
-              </div>
-            </div>
-          </div>
+       
 
           {/* Food Gallery */}
           <FoodGallery title="Why food rescue matters in Bhopal" />
