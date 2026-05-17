@@ -124,60 +124,49 @@ export default function Home() {
             </div>
             <NourishMap listings={listings} center={BHOPAL} />
           </div>
-          {/* Hero — Bhopal Lake background */}
-          <div className="hero-section fade-in-up">
-            <div className="hero-bg" />
-            <div className="hero-overlay" />
-            <div className="hero-content">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-                <div style={{ flex: 1 }}>
-                  <div className="hero-badge">
-                    <span className="live-dot" />
-                    Live · Bhopal Food Rescue Network
-                  </div>
-                  <h1 className="hero-title">
-                    Rescue Food from<br />
-                    <span className="hl">MANIT Mess</span> &<br />
-                    Bhopal Weddings
-                  </h1>
-                  <p className="hero-subtitle">
-                    Every day, tonnes of food goes to waste in hostel messes, canteens & shaadi halls while people go hungry. We fix that — in real time.
-                  </p>
-                  <div className="hero-ctas">
-                    {!user ? (
-                      <>
-                        <Link to="/register?role=donor">
-                          <button className="btn btn-yellow btn-lg">🍛 I Have Surplus Food</button>
-                        </Link>
-                        <Link to="/register?role=volunteer">
-                          <button className="btn btn-lg" style={{ background: 'rgba(255,255,255,0.15)', color: '#fff', border: '1.5px solid rgba(255,255,255,0.4)' }}>
-                            🚴 Volunteer to Rescue
-                          </button>
-                        </Link>
-                      </>
-                    ) : (
-                      <Link to={user.role === 'donor' ? '/create' : '/dashboard'}>
-                        <button className="btn btn-yellow btn-lg">
-                          {user.role === 'donor' ? '+ Post Surplus Food' : '🗺 See Available Food'}
-                        </button>
-                      </Link>
-                    )}
-                  </div>
-                </div>
+         
+         {/* Hero */}
+<div className="hero-section fade-in-up">
+  <div className="hero-bg" />
+  <div className="hero-overlay" />
 
-                {/* MANIT logo in hero */}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
-                  <img src="/manit-logo.png" alt="MANIT Bhopal"
-                    style={{ width: 100, height: 100, objectFit: 'contain', filter: 'drop-shadow(0 0 12px rgba(245,196,0,0.5))' }} />
-                  <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: 11, textAlign: 'center', fontWeight: 600 }}>
-                    MAULANA AZAD NIT<br />BHOPAL
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div className="hero-content">
+    <div className="hero-ctas">
+      {!user ? (
+        <>
+          <Link to="/register?role=donor">
+            <button className="btn btn-yellow btn-lg">
+              🍛 Post Surplus Food
+            </button>
+          </Link>
 
-    
+          <Link to="/register?role=volunteer">
+            <button
+              className="btn btn-lg"
+              style={{
+                background: 'rgba(255,255,255,0.15)',
+                color: '#fff',
+                border: '1.5px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              🚴 Volunteer
+            </button>
+          </Link>
+        </>
+      ) : (
+        <Link to={user.role === 'donor' ? '/create' : '/dashboard'}>
+          <button className="btn btn-yellow btn-lg">
+            {user.role === 'donor'
+              ? '+ Post Surplus Food'
+              : '🗺 See Available Food'}
+          </button>
+        </Link>
+      )}
+    </div>
+  </div>
+</div>
+
+  
 
           {/* Listings */}
           <div style={{ marginBottom: 36 }}>
