@@ -179,23 +179,7 @@ export default function Home() {
             <NourishMap listings={listings} center={BHOPAL} />
           </div>
 
-          {/* How it works */}
-          <div style={{ marginBottom: 36 }}>
-            <h2 className="section-title" style={{ textAlign: 'center' }}>How Nourish works</h2>
-            <div className="grid-3">
-              {[
-                { icon: '🍛', bg: '#E1F5EE', title: 'Mess posts surplus', desc: 'MANIT hostel mess, canteen, or wedding hall posts leftover food with quantity and pickup window' },
-                { icon: '🔔', bg: '#E6F1FB', title: 'Volunteer gets notified', desc: 'Nearby students and volunteers receive real-time alerts on the live map — no app needed' },
-                { icon: '🤝', bg: '#FAEEDA', title: 'Food gets rescued', desc: 'Volunteer claims, picks up, delivers to those in need. Impact tracked automatically' },
-              ].map((f, i) => (
-                <div key={i} className={`feature-card fade-in-up delay-${i + 1}`}>
-                  <div className="feature-icon" style={{ background: f.bg, fontSize: 28 }}>{f.icon}</div>
-                  <div style={{ fontWeight: 700, marginBottom: 8, fontSize: 16 }}>Step {i + 1}: {f.title}</div>
-                  <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.6 }}>{f.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+    
 
           {/* Listings */}
           <div style={{ marginBottom: 36 }}>
@@ -216,6 +200,23 @@ export default function Home() {
                 </div>
               )
             }
+          </div>
+                {/* How it works */}
+          <div style={{ marginBottom: 36 }}>
+            <h2 className="section-title" style={{ textAlign: 'center' }}>How Nourish works</h2>
+            <div className="grid-3">
+              {[
+                { icon: '🍛', bg: '#E1F5EE', title: 'Mess posts surplus', desc: 'MANIT hostel mess, canteen, or wedding hall posts leftover food with quantity and pickup window' },
+                { icon: '🔔', bg: '#E6F1FB', title: 'Volunteer gets notified', desc: 'Nearby students and volunteers receive real-time alerts on the live map — no app needed' },
+                { icon: '🤝', bg: '#FAEEDA', title: 'Food gets rescued', desc: 'Volunteer claims, picks up, delivers to those in need. Impact tracked automatically' },
+              ].map((f, i) => (
+                <div key={i} className={`feature-card fade-in-up delay-${i + 1}`}>
+                  <div className="feature-icon" style={{ background: f.bg, fontSize: 28 }}>{f.icon}</div>
+                  <div style={{ fontWeight: 700, marginBottom: 8, fontSize: 16 }}>Step {i + 1}: {f.title}</div>
+                  <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.6 }}>{f.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
        
