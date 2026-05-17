@@ -36,8 +36,10 @@ const getListings = async (req, res) => {
 const getMyListings = async (req, res) => {
   try {
     const listings = await Listing.find({ donor: req.user._id })
+      .populate('donor', 'name address phone')
       .populate('claimedBy', 'name phone')
       .sort({ createdAt: -1 });
+
     res.json(listings);
   } catch (err) {
     res.status(500).json({ message: err.message });

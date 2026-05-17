@@ -157,32 +157,41 @@ export default function Home() {
           </div>
 
           {/* India food waste stats band */}
-          <div className="info-band fade-in-up delay-1">
-            <div className="info-band-stat">
-              <div className="n">68M+</div>
-              <div className="l">tonnes food wasted in India/yr</div>
-            </div>
-            <div className="info-band-divider" />
-            <div className="info-band-stat">
-              <div className="n">200M</div>
-              <div className="l">Indians sleep hungry daily</div>
-            </div>
-            <div className="info-band-divider" />
-            <div className="info-band-stat">
-              <div className="n">40%</div>
-              <div className="l">of Indian food production wasted</div>
-            </div>
-            <div className="info-band-divider" />
-            <div className="info-band-stat">
-              <div className="n">₹92K Cr</div>
-              <div className="l">annual food waste value</div>
-            </div>
-            <div className="info-band-divider" />
-            <div className="info-band-stat">
-              <div className="n" style={{ color: '#4ade80' }}>Nourish</div>
-              <div className="l">is changing this in Bhopal</div>
-            </div>
-          </div>
+          {/* Community impact band */}
+<div className="info-band fade-in-up delay-1">
+  <div className="info-band-stat">
+    <div className="n">24/7</div>
+    <div className="l">surplus food coordination</div>
+  </div>
+
+  <div className="info-band-divider" />
+
+  <div className="info-band-stat">
+    <div className="n">100+</div>
+    <div className="l">meals can be rescued daily</div>
+  </div>
+
+  <div className="info-band-divider" />
+
+  <div className="info-band-stat">
+    <div className="n">30min</div>
+    <div className="l">average volunteer response goal</div>
+  </div>
+
+  <div className="info-band-divider" />
+
+  <div className="info-band-stat">
+    <div className="n">MANIT</div>
+    <div className="l">student-led food rescue initiative</div>
+  </div>
+
+  <div className="info-band-divider" />
+
+  <div className="info-band-stat">
+    <div className="n" style={{ color: '#4ade80' }}>Bhopal</div>
+    <div className="l">community-focused distribution network</div>
+  </div>
+</div>
 
           {/* Impact counters */}
           <div className="grid-4" style={{ marginBottom: 36 }}>
