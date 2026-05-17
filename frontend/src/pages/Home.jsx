@@ -156,50 +156,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* India food waste stats band */}
-          {/* Community impact band */}
-<div className="info-band fade-in-up delay-1">
-  <div className="info-band-stat">
-    <div className="n">24/7</div>
-    <div className="l">surplus food coordination</div>
-  </div>
-
-  <div className="info-band-divider" />
-
-  <div className="info-band-stat">
-    <div className="n">1000+</div>
-    <div className="l">meals can be rescued daily</div>
-  </div>
-
-  <div className="info-band-divider" />
-
-  <div className="info-band-stat">
-    <div className="n">30min</div>
-    <div className="l">average volunteer response goal</div>
-  </div>
-
-  <div className="info-band-divider" />
-
-  <div className="info-band-stat">
-    <div className="n">MANIT</div>
-    <div className="l">student-led food rescue initiative</div>
-  </div>
-
-  <div className="info-band-divider" />
-
-  <div className="info-band-stat">
-    <div className="n" style={{ color: '#4ade80' }}>Bhopal</div>
-    <div className="l">community-focused distribution network</div>
-  </div>
-</div>
-
-          {/* Impact counters */}
-          <div className="grid-4" style={{ marginBottom: 36 }}>
-            <StatCard value={impact.totalMeals || 1240} suffix="" label="🍽 Meals rescued" color="#085041" bgClass="grad-green" />
-            <StatCard value={impact.totalKg || 620} suffix=" kg" label="🌾 Food saved" color="#0C447C" bgClass="grad-blue" />
-            <StatCard value={impact.totalCO2 || 1550} suffix=" kg" label="🌍 CO₂ avoided" color="#3C3489" bgClass="grad-purple" />
-            <StatCard value={impact.totalRescues || 48} suffix="" label="🤝 Rescue ops" color="#854F0B" bgClass="grad-yellow" />
-          </div>
+ 
 
           {/* Live Map */}
           <div style={{ marginBottom: 36 }}>
