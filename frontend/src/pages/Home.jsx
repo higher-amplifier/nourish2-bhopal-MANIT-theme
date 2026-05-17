@@ -103,6 +103,27 @@ export default function Home() {
       <div className="page">
         <div className="container">
 
+
+          {/* Live Map */}
+          <div style={{ marginBottom: 36 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, flexWrap: 'wrap', gap: 10 }}>
+              <div>
+                <h2 className="section-title" style={{ marginBottom: 2 }}>
+                  <span className="live-dot" /> Live food map — Bhopal
+                </h2>
+                <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>Showing MANIT campus & surrounding areas</p>
+              </div>
+              <div style={{ display: 'flex', gap: 6 }}>
+                {['available', 'claimed', 'completed'].map(s => (
+                  <button key={s} onClick={() => setFilter(s)}
+                    className={`btn btn-sm ${filter === s ? 'btn-cyan' : 'btn-outline'}`}>
+                    {s === 'available' ? '🟢' : s === 'claimed' ? '🟡' : '✅'} {s}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <NourishMap listings={listings} center={BHOPAL} />
+          </div>
           {/* Hero — Bhopal Lake background */}
           <div className="hero-section fade-in-up">
             <div className="hero-bg" />
@@ -154,29 +175,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-
- 
-
-          {/* Live Map */}
-          <div style={{ marginBottom: 36 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, flexWrap: 'wrap', gap: 10 }}>
-              <div>
-                <h2 className="section-title" style={{ marginBottom: 2 }}>
-                  <span className="live-dot" /> Live food map — Bhopal
-                </h2>
-                <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>Showing MANIT campus & surrounding areas</p>
-              </div>
-              <div style={{ display: 'flex', gap: 6 }}>
-                {['available', 'claimed', 'completed'].map(s => (
-                  <button key={s} onClick={() => setFilter(s)}
-                    className={`btn btn-sm ${filter === s ? 'btn-cyan' : 'btn-outline'}`}>
-                    {s === 'available' ? '🟢' : s === 'claimed' ? '🟡' : '✅'} {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <NourishMap listings={listings} center={BHOPAL} />
           </div>
 
     
