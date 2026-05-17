@@ -8,12 +8,12 @@ const PHOTOS = [
     tagText: '#7a1f1f',
   },
   {
-    url: 'https://images.unsplash.com/photo-1593113598332-cd59a0c3a9a1?w=900&q=80',
-    caption: 'Volunteers making a difference — one meal at a time',
-    tag: 'Rescue in Action',
-    tagColor: '#E1F5EE',
-    tagText: '#085041',
-  },
+  url: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=900&q=80',
+  caption: 'Together we can reduce hunger and food waste',
+  tag: 'Community Support',
+  tagColor: '#E6F7EE',
+  tagText: '#0B6B4B',
+},
   {
     url: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=900&q=80',
     caption: 'Food distribution changes lives in communities',
