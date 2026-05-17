@@ -38,33 +38,72 @@ const PHOTOS = [
   },
 ];
 
-export default function FoodGallery({ title = 'The reality we\'re fighting' }) {
+export default function FoodGallery({ title }) {
+  const items = [
+    {
+      tag: 'Rescue in Action',
+      img: '/gallery/rescue.jpg',
+    },
+    {
+      tag: 'Community Support',
+      img: '/gallery/community.jpg',
+    },
+    {
+      tag: 'Mess Rescue',
+      img: '/gallery/mess.jpg',
+    },
+    {
+      tag: 'Food Distribution',
+      img: '/gallery/distribution.jpg',
+    },
+  ];
+
   return (
     <div style={{ marginBottom: 40 }}>
-      <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--manit-navy)', marginBottom: 6 }}>{title}</h2>
-      <p style={{ color: 'var(--text-muted)', fontSize: 14, marginBottom: 20 }}>
-        Real images. Real problem. Real solution — built right here at MANIT Bhopal.
-      </p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
-        {PHOTOS.map((p, i) => (
-          <div key={i} style={{ borderRadius: 12, overflow: 'hidden', position: 'relative', height: 200, cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }}
-            onMouseEnter={e => e.currentTarget.querySelector('.overlay').style.opacity = '1'}
-            onMouseLeave={e => e.currentTarget.querySelector('.overlay').style.opacity = '0'}>
+      <h2 className="section-title">{title}</h2>
+
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2,1fr)',
+          gap: 18,
+        }}
+      >
+        {items.map((item, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'relative',
+              borderRadius: 20,
+              overflow: 'hidden',
+              height: 240,
+              background: '#ddd',
+            }}
+          >
             <img
-              src={p.url}
-              alt={p.caption}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }}
-              onMouseEnter={e => e.target.style.transform = 'scale(1.06)'}
-              onMouseLeave={e => e.target.style.transform = 'scale(1)'}
-              onError={e => { e.target.style.display = 'none'; e.target.parentElement.style.background = '#f0f0f0'; }}
+              src={item.img}
+              alt={item.tag}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
             />
-            {/* Always visible tag */}
-            <div style={{ position: 'absolute', top: 10, left: 10 }}>
-              <span style={{ background: p.tagColor, color: p.tagText, fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 999 }}>{p.tag}</span>
-            </div>
-            {/* Hover overlay */}
-            <div className="overlay" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 50%)', opacity: 0, transition: 'opacity 0.3s', display: 'flex', alignItems: 'flex-end', padding: 14 }}>
-              <p style={{ color: '#fff', fontSize: 13, fontWeight: 500, lineHeight: 1.4 }}>{p.caption}</p>
+
+            <div
+              style={{
+                position: 'absolute',
+                top: 14,
+                left: 14,
+                background: 'rgba(255,255,255,.9)',
+                padding: '8px 14px',
+                borderRadius: 999,
+                fontSize: 13,
+                fontWeight: 700,
+                color: '#0b3b66',
+              }}
+            >
+              {item.tag}
             </div>
           </div>
         ))}
