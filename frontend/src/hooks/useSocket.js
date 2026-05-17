@@ -5,7 +5,7 @@ export const useSocket = (onEvent) => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    const socket = io(import.meta.env.VITE_API_URL || 'http://localhost:5000');
+  const socket = io(import.meta.env.VITE_BASE_URL);
     socketRef.current = socket;
 
     socket.emit('join:city', 'Jaipur');
