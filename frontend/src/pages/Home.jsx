@@ -167,7 +167,7 @@ export default function Home() {
   <div className="info-band-divider" />
 
   <div className="info-band-stat">
-    <div className="n">100+</div>
+    <div className="n">1000+</div>
     <div className="l">meals can be rescued daily</div>
   </div>
 
